@@ -1,85 +1,118 @@
 # Student Result Analysis
 
-A comprehensive data analysis project examining the factors that influence student academic performance across Math, Reading, and Writing subjects.
+## Project Overview
 
-## 📊 Project Overview
+This project provides a comprehensive data analysis of the factors that influence student academic performance across Math, Reading, and Writing subjects. The analysis identifies correlations between demographic and socioeconomic factors (such as parental education, gender, ethnicity, and marital status) and student achievement.
 
-This project analyzes student performance data to identify patterns and relationships between various demographic and socioeconomic factors and academic achievement. The analysis provides insights into how factors like parental education, gender, ethnicity, and marital status correlate with student scores.
+## Project Structure
 
-## 📁 Project Structure
-
-```
-student-result-analysis/
-├── project 2.ipynb          # Main Jupyter notebook with analysis
-├── student_scores.csv       # Dataset containing student information and scores
-├── plots/                   # Generated visualizations
+```text
+Student-Result-Analysis/
+├── analysis.ipynb                   # Main Jupyter notebook containing the analysis
+├── student_scores.csv               # Dataset with student information and scores
+├── plots/                           # Generated visualization assets
 │   ├── gender_distribution.png
-│   ├── ethnic_group_distribution.png
-│   ├── ethnic_group_count.png
 │   ├── parent_education_vs_student_score.png
 │   ├── marital_status_vs_student_score.png
 │   ├── math_score_distribution.png
 │   ├── reading_score_distribution.png
-│   └── writing_score_distribution.png
-└── README.md               # Project documentation
+│   ├── writing_score_distribution.png
+│   ├── ethnic_group_distribution.png
+│   └── ethnic_group_count.png
+├── README.md                        # Project documentation
+└── project 2.ipynb                  # Backup of original analysis
 ```
 
-## 📋 Dataset Description
+## Dataset Description
 
-The dataset contains information about students including:
+The dataset encompasses the following student attributes:
+- Demographics: Gender, Ethnic Group
+- Family Background: Parent Education Level, Parent Marital Status
+- Academic Performance: Math Score, Reading Score, Writing Score
+- Other Factors: Lunch Type, Test Preparation, Study Hours, Sports Practice
 
-- **Demographics**: Gender, Ethnic Group
-- **Family Background**: Parent Education Level, Parent Marital Status
-- **Academic Performance**: Math Score, Reading Score, Writing Score
-- **Other Factors**: Lunch Type, Test Preparation, Study Hours, Sports Practice, etc.
+## Notebook Structure
 
-## 🔍 Key Analyses Performed
+The analysis notebook is organized into three main sections:
 
-### 1. Gender Distribution Analysis
-- Examined the distribution of male and female students in the dataset
-- **Finding**: More females than males in the dataset
+1. **Import Libraries and Load Data** - Loads the dataset and performs initial exploratory checks (head, describe, info)
+2. **Data Cleaning and Preprocessing** - Removes unnecessary columns and fixes data entry errors in the weekly study hours
+3. **Exploratory Data Analysis (EDA)** - Generates comprehensive visualizations and analyzes:
+   - Gender distribution
+   - Impact of parental education on student scores
+   - Impact of parental marital status on student scores
+   - Score distributions for Math, Reading, and Writing
+   - Ethnic group representation in the dataset
 
-### 2. Parental Education Impact
-- Analyzed the relationship between parent education levels and student performance
-- **Finding**: Higher parental education correlates with better student scores across all subjects
+## Visualizations and Plots
 
-### 3. Marital Status Impact
-- Investigated how parental marital status affects student performance
-- **Finding**: Minimal to no impact of parental marital status on student scores
+### 1. Gender Distribution
+![Gender Distribution](plots/gender_distribution.png)
+This visualization displays the count of male and female students in the dataset. The data shows a slightly higher proportion of female students compared to male students.
 
-### 4. Score Distribution Analysis
-- Created box plots for Math, Reading, and Writing scores to identify:
-  - Central tendencies
-  - Outliers
-  - Score ranges and quartiles
+### 2. Impact of Parental Education on Student Scores
+![Parental Education Impact](plots/parent_education_vs_student_score.png)
+This heatmap illustrates the relationship between parental education levels and average student performance in Math, Reading, and Writing. Students with parents holding higher education degrees demonstrate consistently better performance across all academic subjects.
 
-### 5. Ethnic Group Analysis
-- Examined the distribution of different ethnic groups
-- Analyzed representation across all groups (A through E)
+### 3. Impact of Parental Marital Status on Student Scores
+![Parental Marital Status Impact](plots/marital_status_vs_student_score.png)
+This heatmap shows the correlation between parental marital status and student academic performance. Parental marital status exhibits no significant correlation with student academic performance.
 
-## 📈 Key Findings
+### 4. Math Score Distribution
+![Math Score Distribution](plots/math_score_distribution.png)
+Box plot showing the distribution of Math scores among students, detailing central tendencies, score ranges, and outliers.
 
-1. **Parental Education is Crucial**: Students with parents having higher education levels (master's degree, bachelor's degree) consistently perform better across all subjects.
+### 5. Reading Score Distribution
+![Reading Score Distribution](plots/reading_score_distribution.png)
+Box plot displaying the distribution of Reading scores, revealing the range and spread of student performance in this subject.
 
-2. **Gender Balance**: The dataset shows a slight female majority, providing balanced gender representation for analysis.
+### 6. Writing Score Distribution
+![Writing Score Distribution](plots/writing_score_distribution.png)
+Box plot presenting the distribution of Writing scores, illustrating student performance patterns and variability in this subject.
 
-3. **Marital Status Negligible Impact**: Parental marital status shows no significant correlation with student academic performance.
+### 7. Ethnic Group Distribution
+![Ethnic Group Distribution](plots/ethnic_group_distribution.png)
+![Ethnic Group Count](plots/ethnic_group_count.png)
+These visualizations show the representation of the five distinct ethnic groups in the dataset. The pie chart displays the percentage distribution, while the count plot shows the absolute number of students from each ethnic group.
 
-4. **Ethnic Diversity**: The dataset includes students from 5 different ethnic groups with varying representation levels.
+## Key Analyses and Findings
 
-## 🛠️ Technologies Used
+1. Parental Education Impact
+Students with parents holding higher education degrees (master's degree, bachelor's degree) demonstrate consistently better performance across all academic subjects.
 
-- **Python 3.x**
-- **Pandas** - Data manipulation and analysis
-- **NumPy** - Numerical computations
-- **Matplotlib** - Data visualization
-- **Seaborn** - Statistical data visualization
+2. Gender Distribution
+The dataset contains a slight female majority, allowing for a balanced gender representation.
 
-## 🚀 Getting Started
+3. Marital Status Impact
+Parental marital status exhibits no significant correlation with student academic performance.
+
+4. Score Distribution Analysis
+Box plots generated for Math, Reading, and Writing scores detail central tendencies, score ranges, and outliers.
+
+5. Ethnic Group Analysis
+The dataset encompasses representation from five distinct ethnic groups.
+
+## Technologies Used
+
+- Python 3.x
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+
+## Key Findings Summary
+
+- **Parental Education Impact**: Students with parents holding higher education degrees (Bachelor's, Master's) consistently score better across all subjects (Math, Reading, Writing).
+- **Gender Distribution**: The dataset shows a slight female majority, providing relatively balanced gender representation.
+- **Marital Status Impact**: Parental marital status exhibits no significant correlation with student academic performance.
+- **Score Distribution**: Math, Reading, and Writing scores show relatively normal distributions with comparable ranges and outliers.
+- **Ethnic Representation**: The dataset includes representation from five distinct ethnic groups with reasonably balanced distribution across all groups.
+
+## Getting Started
 
 ### Prerequisites
 
-Make sure you have Python installed with the following packages:
+Ensure Python is installed along with the required libraries:
 
 ```bash
 pip install pandas numpy matplotlib seaborn jupyter
@@ -87,55 +120,16 @@ pip install pandas numpy matplotlib seaborn jupyter
 
 ### Running the Analysis
 
-1. Clone or download this repository
-2. Navigate to the project directory
-3. Launch Jupyter Notebook:
+1. Clone or download the repository to the local machine.
+2. Navigate to the project directory.
+3. Ensure the dataset file `student_scores.csv` is in the project directory.
+4. Launch Jupyter Notebook:
    ```bash
    jupyter notebook
    ```
-4. Open `project 2.ipynb`
-5. Run all cells to reproduce the analysis
+5. Open `analysis.ipynb`.
+6. Run all cells sequentially to reproduce the analysis and generate the visualizations in the `plots/` folder.
 
-## 📊 Visualizations
+## License
 
-The project generates several insightful visualizations:
-
-- **Gender Distribution**: Bar chart showing male/female student counts
-- **Ethnic Group Analysis**: Both pie chart and bar chart representations
-- **Parental Education Heatmap**: Shows correlation between parent education and student scores
-- **Marital Status Heatmap**: Analyzes impact of parental marital status
-- **Score Distributions**: Box plots for Math, Reading, and Writing scores
-
-## 🎯 Future Enhancements
-
-Potential areas for further analysis:
-
-- Correlation analysis between different score types
-- Impact of study hours on performance
-- Effect of test preparation on scores
-- Transportation method influence on academic performance
-- Lunch type (standard vs. free/reduced) impact analysis
-- Sports participation correlation with academic performance
-
-## 📝 Data Preprocessing
-
-The analysis includes data cleaning steps:
-- Removal of unnecessary columns (`Unnamed: 0`)
-- Standardization of weekly study hours format
-- Handling of missing values
-
-## 🤝 Contributing
-
-Feel free to fork this project and submit pull requests for any improvements or additional analyses.
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 📧 Contact
-
-For questions or suggestions regarding this analysis, please feel free to reach out.
-
----
-
-*This analysis provides valuable insights into factors affecting student performance and can be used by educators and policymakers to make data-driven decisions.*
+This project is distributed under the MIT License.
